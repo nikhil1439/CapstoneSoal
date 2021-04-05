@@ -1,0 +1,130 @@
+*{
+    box-sizing: border-box;
+}
+.container-plans{
+    position:relative;
+    color:white;
+    
+}
+.plan-card{
+    box-shadow: 
+    inset 0 -3em 3em rgba(0,0,0,0.1), 
+          0 0  0 2px rgb(255,255,255),
+          0.3em 0.3em 1em rgba(0,0,0,0.3);
+  border-radius: 2.5%;
+  display: flex;
+  flex-direction: row;
+  height:500px;
+  width:100%;
+  margin-top:50px;
+  justify-items: center;
+    align-items: center ;
+  
+  
+}
+
+.plan-select{
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    align-items: center ;
+    box-sizing: border-box;
+    width:120%;
+    /*border-radius: 10%;*/
+    flex-wrap: wrap;
+    float:left;
+}
+
+.top-cont{
+    display:flex;
+    flex-direction: row;
+}
+.type-card{
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 1);
+    display: flex;
+    justify-content: center;
+    align-content: center ;
+    height:100px;
+    width:150px;
+    margin: 50px;
+    flex-wrap: wrap;
+    cursor: pointer;
+}
+
+.type-card img{
+    width:150px;
+    height:100px;
+    position:relative;
+}
+
+.type-card p{
+   position: absolute;
+   font-weight: bold;
+    color: black;
+}
+
+.plan-details{
+    
+    width: 100%;
+    margin:20px;
+    border-radius: 10%;
+    float:right;
+}
+
+h6{
+    margin:20px;
+}
+
+.mr-2{
+    margin:10px;
+}
+
+.btn-toolbar{
+    display:flex;
+    flex-direction: column;
+}
+
+#pesca{
+    background-color: white;
+}
+
+.selected-details{
+    border:1px solid white;
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    align-items: center;
+    padding: 10px;
+}
+
+.type-card::selection{
+    color:blue;
+}
+
+.plan-button{
+    width:150px;
+    height:100px;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    background: none;
+    border:none;
+    flex-wrap: wrap;
+    margin:0px;
+    padding: 0%;
+    box-sizing: border-box;
+   
+}
+
+.plan-button img{
+    width:150px;
+    height:100px;
+    margin:0px;
+    padding: 0%;
+}
+
+.active, .plan-button:hover {
+    background-color: #666;
+    color: white;
+  }
+

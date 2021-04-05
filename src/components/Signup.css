@@ -1,0 +1,40 @@
+.signup-cont{
+    margin: auto;
+    margin-top: 80px;
+    width: 50%;
+    padding: 10px;
+    height: 250px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    border: 3px solid black;
+    padding: 30px;
+    border-radius: 4px;
+}
+ .input{
+     width:400px;
+     margin-top: 10px;
+     border-radius: 10px;
+     border: 2px solid;
+     padding: 5px;
+     margin-left: 140px;
+     font-family:Snell Roundhand
+
+ }
+ .button{
+     margin-top: 10px;
+     width:100px;
+     border:solid 2px;
+     border-radius: 10px;
+     border: 2px solid;
+     padding: 5px;
+     margin-left: 280px;
+     font-family:Snell Roundhand
+ }
+ 
+ .head{
+    
+    font-family: Snell Roundhand;
+
+ }
