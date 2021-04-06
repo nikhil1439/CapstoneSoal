@@ -13,6 +13,9 @@ import { Redirect } from 'react-router-dom';
 
 export const Cart = (props) => {
 
+
+    
+
     const { shoppingCart, dispatch, totalPrice, totalQty } = useContext(CartContext);
       
     if(props.logout === "") 
@@ -21,6 +24,9 @@ export const Cart = (props) => {
                 <Redirect to="/login"/>)
         }
 
+      const  onClick = ()=>{
+            props.setOrder(shoppingCart)
+        }
     return (
         <>
             <>
@@ -76,7 +82,7 @@ export const Cart = (props) => {
                             <span>{totalQty}</span>
                         </div>
                         <Link to='cashout' className='cashout-link'>
-                            <button className='btn btn-success btn-md' style={{ marginTop: 5 + 'px' }}>
+                            <button className='btn btn-success btn-md' onClick={onClick} style={{ marginTop: 5 + 'px' }}>
                                 Cash on delivery
                         </button>
                         </Link>

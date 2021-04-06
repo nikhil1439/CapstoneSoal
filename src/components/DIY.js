@@ -16,7 +16,7 @@ export const DIY = (props) => {
             <div className='products-container'>
                 {products.length === 0 && <div>slow internet...no products to display</div>}
                 {products.map(product => (
-                   <div className='product-card' key={product.ProductID}>
+                   <div className='product-card' >
                          <Link   key={product.ProductID} to={`/productdetails/${product.ProductID}`} style={{textDecoration:"none"}}><div className='product-img'>
                             <img src={product.ProductImg} alt="not found" />
                         </div>

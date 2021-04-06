@@ -50,7 +50,7 @@ export const Navigation = (props) =>
             <NavDropdown title="Account" id="nav-dropdown">
                 <p className="nav-link">{`${props.logout.email}`}</p>
              <NavDropdown.Item eventKey="4.1"  >Your Details</NavDropdown.Item>
-             <NavDropdown.Item eventKey="4.2"  >Your Orders</NavDropdown.Item>
+            <NavDropdown.Item eventKey="4.2"  ><Link to ="/orders"> Your Orders</Link></NavDropdown.Item>
              <NavDropdown.Item eventKey="4.3" onClick={onClick} >Logout</NavDropdown.Item>
             </NavDropdown>
             

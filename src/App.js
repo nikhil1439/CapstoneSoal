@@ -27,6 +27,7 @@ import { AddPlansProducts } from './components/AddProducts/AddPlansProducts';
 import { PlanProductsContextProvider } from "./components/Global/PlanProductsContext";
 import { ProductSelection } from './components/ProductSelection';
 import { PlanProductDetails } from './components/PlanProductDetails';
+import { Orders } from './components/Orders';
 
 
 
@@ -36,7 +37,8 @@ class App extends React.Component {
     super(props);
   this.state ={
     user: "",
-    type:""
+    type:"",
+    order:[]
   }
   this.authListener = this.authListener.bind(this);
 }
@@ -45,7 +47,9 @@ setType = (type)=>{
   this.setState({type})
 }
 
-
+setOrder = (order) =>{
+  this.setState({order})
+}
 
 
 componentDidMount() {
@@ -64,7 +68,7 @@ authListener() {
 
   
 render(){
-  console.log(this.state)
+  console.log(typeof(this.state.order))
   return (
     
       <ProductsContextProvider>
@@ -80,17 +84,19 @@ render(){
       <Route exact path = "/login" render={()=>{return <Signin logout={this.state.user}/>}}/> 
       <Route exact path="/register" render={()=>{return <Signup/>}}/>
       <Route exact path="/cookedmeals" render={()=>{return <CookedMeals/>}}/>
-      <Route exact path="/diykits" render={()=>{return <DIY Type={this.state.type}/>}}/>c
+      <Route exact path="/diykits" render={()=>{return <DIY Type={this.state.type}/>}}/>
       <Route exact path="/productselect" render={()=>{return <ProductSelection />}}/>
       <Route exact path="/addproducts" render={()=>{return <AddProducts/>}}/>
       <Route exact path="/addcookedproducts" render={()=>{return <AddCookedProducts/>}}/>
       <Route exact path="/addplansproducts" render={()=>{return <AddPlansProducts/>}}/>
-      <Route exact path="/cart" render={()=>{return <Cart logout={this.state.user}/> }}/>
-      <Route exact path="/cashout" render={()=>{return <Cashout logout={this.state.user}/> }}/>
+      <Route exact path="/cart" render={()=>{return <Cart logout={this.state.user} setOrder={this.setOrder}/> }}/>
+      <Route exact path="/cashout" render={()=>{return <Cashout logout={this.state.user}  order={this.state.order}/> }}/>
       <Route exact path="/productdetails/:id" component={ProductDetails}/>
       <Route exact path="/cookedproductdetails/:id" component={CookedProductDetails}/>
       <Route exact path="/planproductdetails/:id" component={PlanProductDetails}/>
       <Route exact path="/plans" render={()=>{return <Plans/>}}/>
+      <Route exact path="/orders" render={()=>{return <Orders order={this.state.order}  logout={this.state.user}/>}}/>
+
 
       </BrowserRouter>
       </div>

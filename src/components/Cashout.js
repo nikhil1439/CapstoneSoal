@@ -26,7 +26,9 @@ export const Cashout = (props) => {
                 <Redirect to="/login"/>)
         }
 
-    
+    const onClick = () => {
+        localStorage.setItem(props.logout.email , JSON.stringify(props.order))
+    }
 
     const cashoutSubmit = (e) => {
         e.preventDefault();
@@ -88,7 +90,7 @@ export const Cashout = (props) => {
                     <input type="number" className='form-control' required
                         value={totalQty} disabled />
                     <br />
-                    <button type="submit" className='btn btn-success btn-md mybtn'>SUBMIT</button>
+                    <button type="submit" onClick={onClick} className='btn btn-success btn-md mybtn'>SUBMIT</button>
                 </form>
                 {error && <span className='error-msg'>{error}</span>}
             </div>
