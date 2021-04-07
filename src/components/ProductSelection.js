@@ -24,7 +24,7 @@ export const ProductSelection = () => {
 
     if(type==="vegan")
     {
-        food = "vegan"
+        food = "Vegan"
     }
     if (type==="pesca")
     {
