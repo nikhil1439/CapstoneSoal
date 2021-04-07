@@ -6,9 +6,30 @@ import "./DIY.css"
 
 export const ProductSelection = () => {
 
-    const { products,recipie} = useContext(PlanProductsContext);
+    const { products,recipie,type} = useContext(PlanProductsContext);
 
     const { cart,dispatch } = useContext(CartContext);
+
+    var food = "food";
+
+    if(type === "meat")
+    {
+        food ="Non-Vegetarian & Veg"
+    }
+    
+    if(type==="veg")
+    {
+        food ="Vegetarian"
+    }
+
+    if(type==="vegan")
+    {
+        food = "vegan"
+    }
+    if (type==="pesca")
+    {
+        food = "Pescatarian"
+    }
 
     console.log(cart.totalQty)
 
@@ -17,7 +38,7 @@ export const ProductSelection = () => {
         <>
             
             {products.length !== 0 && <h1>DIY Products - Cook Yourself With the Ingredients</h1> 
-            && <h1>Please add {`${recipie}`} items to your Cart</h1>}
+            && <div><h1>{`${food}`} Menu</h1><h3 style={{color:"white",marginLeft:"10px"}}>Please add {`${recipie}`} items to your Cart</h3></div>}
             <div className='products-container'>
                 {products.length === 0 && <div>slow internet...no products to display</div>}
                 {products.map(product => (

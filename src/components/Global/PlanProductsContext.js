@@ -70,7 +70,7 @@ export class PlanProductsContextProvider extends React.Component {
         console.log(this.state)
         return (
 
-            <PlanProductsContext.Provider value={{ products: [...this.state.filterProducts], setType: this.setType, setRecipie:this.setRecipie, recipie:this.state.recipie }}>
+            <PlanProductsContext.Provider value={{ products: [...this.state.filterProducts], setType: this.setType, setRecipie:this.setRecipie, recipie:this.state.recipie, type:this.state.type }}>
                 {this.props.children}
             </PlanProductsContext.Provider>
         )

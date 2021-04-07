@@ -28,6 +28,7 @@ import { PlanProductsContextProvider } from "./components/Global/PlanProductsCon
 import { ProductSelection } from './components/ProductSelection';
 import { PlanProductDetails } from './components/PlanProductDetails';
 import { Orders } from './components/Orders';
+import  AboutUs  from './components/AboutUs';
 
 
 
@@ -96,6 +97,7 @@ render(){
       <Route exact path="/planproductdetails/:id" component={PlanProductDetails}/>
       <Route exact path="/plans" render={()=>{return <Plans/>}}/>
       <Route exact path="/orders" render={()=>{return <Orders order={this.state.order}  logout={this.state.user}/>}}/>
+      <Route exact path="/aboutus" render={()=>{return <AboutUs/>}}/>
 
 
       </BrowserRouter>

@@ -44,8 +44,10 @@ class Plans extends React.Component{
        
         return(
             <div className="container-plans">
+                <h2>Select Your Plan</h2>
                 <div className = "plan-card">
                     <div className="plan-select">
+                    <p style={{color:"black", fontWeight:"bolder"}}>Select Type of Meal</p>
                     <div className="top-cont">
                         <div className="type-card" onClick={()=>this.setState({type:"meat"})}><button className={this.state.activePlan=== 0 ? "active" : ""} onClick={() => this.setActivePlan(0)}id="plan-button"><img  id="im" src="Meatimg.jpg" alt="Meat&Veggies"/><p>Meat & Veggies</p></button></div>
                         <div className="type-card" onClick={()=>this.setState({type:"veg"})}><button className={this.state.activePlan=== 1 ? "active" : ""} onClick={() => this.setActivePlan(1)} id="plan-button"><img id="im" src="tomato.jpg" alt="Veggies"/><p>veggies</p></button></div>

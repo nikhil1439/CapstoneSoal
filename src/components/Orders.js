@@ -6,7 +6,7 @@ import "./Orders.css"
 
 export const Orders =(props)=> {
 
-    var totalprice = 0;
+    //var totalprice = 0;
 
     var prod= localStorage.getItem(props.logout.email)
     var prods = JSON.parse(prod)

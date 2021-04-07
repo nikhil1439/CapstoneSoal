@@ -1,0 +1,33 @@
+.about-cont{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color:white;
+    margin-top: 50px;
+}
+
+.head{
+    display: flex;
+    justify-content: center;
+}
+
+.content{
+    margin:auto;
+    display: flex;
+    text-align: center;
+    width:800px;
+}
+
+.im{
+    width:200px;
+    height:200px;
+    border-radius: 50%;
+    background-color: beige;
+    margin-right:30px;
+}
+.img-cont{
+    display: flex;
+    justify-content: center;
+    
+}

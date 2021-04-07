@@ -3,10 +3,10 @@ import "./Home.css"
 //import { Redirect } from "react-router";
 //import Signin from "./Signin"
 //import { Redirect } from "react-router";
-//import {Link} from "react-router-dom";
+import {Link} from "react-router-dom";
 //import Fire from "../firebase"
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { Carousel} from 'react-bootstrap';
+import { Carousel,Button} from 'react-bootstrap';
 
 
 class Home extends React.Component{
@@ -62,6 +62,7 @@ class Home extends React.Component{
                <p>The old “what do you want to eat?” conversation is about to be banished from your life. Welcome to a world where dinner is always planned, simple, and delicious.</p>
            </div>
            </div>
+           <Link to='/plans'><Button className="butt" type="primary">Get Started</Button></Link>
            </div>
            </div>
           
